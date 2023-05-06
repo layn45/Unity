@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject Prefab;
-    public GameObject marioPrefabs;
+    public GameObject marioPrefab;
 
     public float spawnRate = 1f;
     public float minHeight = -1f;
@@ -34,7 +34,7 @@ public class Spawner : MonoBehaviour
     }
     private void SpawnMario()
     {
-        GameObject mario = Instantiate(marioPrefabs, transform.position, Quaternion.identity);
+        GameObject mario = Instantiate(marioPrefab, transform.position, Quaternion.identity);
         mario.transform.position += Vector3.up * Random.Range(minHeightMario, maxHeightMario);
     }
 }
